@@ -6,6 +6,7 @@
 /* @var $page int */
 
 $this->title = 'Кондрашов Глеб. Мысли. Проекты. Фотографии';
+
 $page = \app\models\Page::find(2);
 
 ?>
