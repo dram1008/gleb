@@ -8,7 +8,7 @@ class m151211_205246_files extends Migration
     public function up()
     {
         $this->execute('CREATE TABLE `rod_files` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,yii
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8');
