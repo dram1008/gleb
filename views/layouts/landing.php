@@ -65,7 +65,7 @@ use app\assets\AppAsset;
                 <ul id="tiny">
                     <li><a href="/">Главная</a></li>
                     <li><a href="/fotos">Фотографии</a></li>
-                    <li><a href="/about2">Контакты</a></li>
+                    <li><a href="/about">Контакты</a></li>
                 </ul>
             </div>
         </div>
