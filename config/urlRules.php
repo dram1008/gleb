@@ -29,6 +29,7 @@ return [
     'activate/<code:\\w+>'                                         => 'site/activate',
     'logDb'                                                        => 'site/log_db',
     'contact'                                                      => 'site/contact',
+    'fotos'                                                         => 'site/fotos',
     'login'                                                        => 'site/login',
     'logout'                                                       => 'site/logout',
     'articles'                                                     => 'site/articles',
@@ -38,7 +39,6 @@ return [
 
     'about'                                                        => 'site/about',
     'about2'                                                       => 'site/about2',
-    'search'                                                       => 'site/search',
     'search'                                                       => 'site/search',
 
 
@@ -53,6 +53,11 @@ return [
     'admin/pages/add'                                              => 'admin_page/add',
     'admin/pages/<id:\\d+>/delete'                                 => 'admin_page/delete',
     'admin/pages/<id:\\d+>/edit'                                   => 'admin_page/edit',
+
+    'admin/files'                                                  => 'admin_files/index',
+    'admin/files/add'                                              => 'admin_files/add',
+    'admin/files/<id:\\d+>/delete'                                 => 'admin_files/delete',
+    'admin/files/<id:\\d+>/edit'                                   => 'admin_files/edit',
 
 
 ];

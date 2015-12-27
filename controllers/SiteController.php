@@ -108,6 +108,11 @@ class SiteController extends BaseController
         return $this->render();
     }
 
+    public function actionFotos()
+    {
+        return $this->render();
+    }
+
     public function actionAbout2()
     {
         return $this->render();

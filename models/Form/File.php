@@ -24,10 +24,17 @@ class File extends \cs\base\BaseForm
 
     public $id;
     public $file;
+    public $title;
 
     function __construct($fields = [])
     {
         static::$fields = [
+            [
+                'title',
+                'Название',
+                1,
+                'string',
+            ],
             [
                 'file',
                 'Файл',
@@ -37,8 +44,11 @@ class File extends \cs\base\BaseForm
                     FileUpload::className(),
                     [
                         'options' => [
-                            'small'    => \app\services\GsssHtml::$formatIcon,
-                            'original' => [1010, 500, \cs\Widget\FileUpload2\FileUpload::MODE_THUMBNAIL_CUT],
+                            'small'    => [
+                                200,
+                                200,
+                                \cs\Widget\FileUpload2\FileUpload::MODE_THUMBNAIL_CUT
+                            ],
                         ]
                     ]
                 ]

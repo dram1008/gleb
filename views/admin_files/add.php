@@ -9,7 +9,7 @@ use yii\db\Query;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model cs\base\BaseForm */
 
-$this->title = $model->name;
+$this->title = 'Добавить фото';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
@@ -17,13 +17,13 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
     </div>
 
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')) { ?>
 
         <div class="alert alert-success">
-            Успешно обновлено.
+            Успешно добавлено.
         </div>
 
-    <?php else: ?>
+    <?php } else { ?>
 
 
         <div class="row">
@@ -32,16 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id'      => 'contact-form',
                     'options' => ['enctype' => 'multipart/form-data']
                 ]); ?>
-                <?= $model->field($form, 'name') ?>
-                <?= $model->field($form, 'v') ?>
-                <?= $model->field($form, 'kvt') ?>
-                <?= $model->field($form, 'price') ?>
-                <?= $model->field($form, 'content') ?>
-                <?= $model->field($form, 'image') ?>
+                <?= $model->field($form, 'title') ?>
+                <?= $model->field($form, 'file') ?>
 
                 <hr>
                 <div class="form-group">
-                    <?= Html::submitButton('Обновить', [
+                    <?= Html::submitButton('Добавить', [
                         'class' => 'btn btn-default',
                         'name'  => 'contact-button',
                         'style' => 'width:100%',
@@ -51,5 +47,5 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
 
-    <?php endif; ?>
+    <?php } ?>
 </div>

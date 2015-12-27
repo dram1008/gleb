@@ -3,20 +3,16 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m151211_205246_files extends Migration
+class m151227_114335_files extends Migration
 {
     public function up()
     {
-        $this->execute('CREATE TABLE `rod_files` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,yii
-  `file` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8');
+        $this->execute('ALTER TABLE galaxysss_5.rod_files ADD title varchar(255) NULL;');
     }
 
     public function down()
     {
-        echo "m151211_205246_files cannot be reverted.\n";
+        echo "m151227_114335_files cannot be reverted.\n";
 
         return false;
     }

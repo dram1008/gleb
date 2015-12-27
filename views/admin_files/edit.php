@@ -6,10 +6,10 @@ use app\models\UnionCategory;
 use yii\db\Query;
 
 /* @var $this yii\web\View */
-/* @var $form cs\base\BaseForm */
-/* @var $model  */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model cs\base\BaseForm */
 
-$this->title = 'Добавить рассылку простую';
+$this->title = $model->title;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container">
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
-            Успешно добавлено.
+            Успешно обновлено.
         </div>
 
     <?php else: ?>
@@ -32,12 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id'      => 'contact-form',
                     'options' => ['enctype' => 'multipart/form-data']
                 ]); ?>
-                <?= $model->field($form, 'subject') ?>
-                <?= $model->field($form, 'content')->textArea(['rows' => 20]) ?>
+                <?= $model->field($form, 'title') ?>
+                <?= $model->field($form, 'file') ?>
 
                 <hr>
                 <div class="form-group">
-                    <?= Html::submitButton('Разослать', [
+                    <?= Html::submitButton('Обновить', [
                         'class' => 'btn btn-default',
                         'name'  => 'contact-button',
                         'style' => 'width:100%',
