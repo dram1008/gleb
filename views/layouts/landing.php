@@ -55,7 +55,7 @@ use app\assets\AppAsset;
         <!-- Begin Logo -->
         <div class="logo" style="padding: 0px;">
             <a href="/">
-                <img src="/images/LogoTPK_site_blog-01.png" alt="" height="68"/>
+                <img src="/images/logo/LogoGLEB_site_blog-01_white.png" alt="" height="68"/>
             </a>
         </div>
         <!-- End Logo -->
@@ -174,7 +174,7 @@ use app\assets\AppAsset;
     </div>
 </div>
 <div class="site-generator-wrapper">
-    <div class="site-generator">ТПК 2015. Все права защищены.
+    <div class="site-generator">Кондрашов Глеб © 2015. Использование любых материалов с сайта возможно только с письменного разрешения владельца.
     </div>
 </div>
 <!-- End Footer -->
