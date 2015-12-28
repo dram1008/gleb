@@ -58,6 +58,11 @@ class Article extends \cs\base\DbRecord
         return \yii\helpers\Url::to($this->getField('image'), $isScheme);
     }
 
+    public function hasImage()
+    {
+        return $this->getField('image', '') != '';
+    }
+
     /**
      * Возвращает ссылку на статью
      *

@@ -18,8 +18,13 @@ $this->title = $item->getField('header');
 
 <div class="main-image">
     <div class="outer">
-        <span class="inset"><img src="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($item->getImage()) ?>" alt=""
+        <?php if ($item->hasImage()) { ?>
+            <span class="inset"><img src="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($item->getImage()) ?>" alt=""
                                  width="1010"></span>
+        <?php } else {?>
+            <iframe width="100%" height="450" src="<?= $item->getField('video') ?>"
+                    frameborder="0" allowfullscreen></iframe>
+        <?php }?>
     </div>
 </div>
 
