@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'О нас';
+$this->title = 'Контакты';
 $this->params['breadcrumbs'][] = $this->title;
 
 $page = \app\models\Page::find(1);
