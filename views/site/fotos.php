@@ -10,9 +10,7 @@ use yii\captcha\Captcha;
 
 $this->title = 'Фотографии';
 
-\app\assets\LightBox\Asset::register($this);
-$this->registerJs("initLightbox();");
-$this->registerJs("lightBoxPath = '" .Yii::$app->assetManager->getBundle('\app\assets\LightBox\Asset')->baseUrl . "';",\yii\web\View::POS_HEAD);
+\app\assets\SlideShow\Asset::register($this);
 ?>
 <div class="box">
 
@@ -20,8 +18,8 @@ $this->registerJs("lightBoxPath = '" .Yii::$app->assetManager->getBundle('\app\a
 
     <?php foreach(\app\models\File::query()->all( ) as $foto) { ?>
         <div class="foto" style="display: inline-block; margin: 10px;">
-            <a href="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($foto['file']) ?>" rel="lightbox[example]">
-                <img src="<?= $foto['file'] ?>">
+            <a href="<?= \cs\Widget\FileUpload2\FileUpload::getOriginal($foto['file']) ?>" rel="lightbox[example]" class="highslide" onclick="return hs.expand(this)">
+                <img src="<?= $foto['file'] ?>"  alt="Highslide JS">
             </a>
         </div>
     <?php } ?>
